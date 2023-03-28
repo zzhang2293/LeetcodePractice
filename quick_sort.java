@@ -43,7 +43,7 @@ public class quick_sort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {2,1,4,1,0,9,7,4,2};
+        int[] arr = {2,1,4,1,0};
         int[] res = quick_sort(arr, arr.length);
         for (int i : res)
         {
