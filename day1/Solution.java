@@ -8,6 +8,7 @@ public class Solution {
      * repeating characters
      * LeetCode #3
      * @param s a string
+     *
      * @return max num
      */
     public static int lengthOfLongestSubstring(String s){
@@ -93,6 +94,10 @@ public class Solution {
 
     }
 
+    // T(n) = n + 2 T(n/2)
+    // for (1 = n) n
+    // call T(n/2) left
+    // call T(n/2) right
     /**
      * get the integer from the substring
      * leetcode #8
