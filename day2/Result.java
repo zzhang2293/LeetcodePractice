@@ -19,6 +19,7 @@ public class Result {
         }
         if (left < num){
             generateParenthesisHelper(num, list, s + "(", left+1, right);
+            
         }
         if (right < left){
             generateParenthesisHelper(num, list, s + ")", left, right + 1);
