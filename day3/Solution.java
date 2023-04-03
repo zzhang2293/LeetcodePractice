@@ -11,6 +11,7 @@ public class Solution {
      * @return sum of rain
      */
     public static int trap1(int[] height) {
+
         int[][][] info = new int[height.length][height.length][2];
         int len = height.length;
         for (int a = 0; a < len; a++) {

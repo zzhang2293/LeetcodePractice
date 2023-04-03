@@ -41,6 +41,7 @@ public class solution {
         int current = 0;
         for (int i = 0; i < len; i ++){
             far = Math.max(far, i + nums[i]);
+            if (i >= far) return 0;
             if (i == current){
                 if (i == len-1) break;
                 current = far;
@@ -49,6 +50,22 @@ public class solution {
         }
         return step;
     }
+
+    public static boolean canJump(int[] nums){
+        int len = nums.length;
+        if (len == 1 || len == 0) return true;
+        int far = 0;
+        int current = 0;
+        for (int i = 0; i < len-1; i ++){
+            far = Math.max(far, i + nums[i]);
+            if (i >= far) return false;
+            if (i == current){
+                current = far;
+            }
+        }
+        return true;
+    }
+
 
 
     /**
@@ -75,6 +92,6 @@ public class solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(maxSubArray(new int[] {-1,-2}));
+        System.out.println(canJump(new int[] {2,0,0}));
     }
 }
